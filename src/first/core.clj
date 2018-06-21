@@ -26,3 +26,12 @@
     (if (empty? coll)
       acc
       (recur (rest coll) (func (first coll) acc)))))
+
+(defn elem [elt lst]
+  (loop [piece elt
+         whole lst]
+    (if (empty? whole)
+      nil
+      (if (= piece (first whole))
+        true
+        (recur piece (rest whole))))))
