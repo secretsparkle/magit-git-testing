@@ -19,3 +19,10 @@
     (if (empty? coll)
       (reverse acc)
       (recur (rest coll) (cons (func (first coll)) acc)))))
+
+(defn my-reduce [func init lst]
+  (loop [coll lst
+         acc init]
+    (if (empty? coll)
+      acc
+      (recur (rest coll) (func (first coll) acc)))))
