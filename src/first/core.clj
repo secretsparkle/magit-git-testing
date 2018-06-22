@@ -20,7 +20,6 @@
       (reverse acc)
       (recur (rest coll) (cons (func (first coll)) acc)))))
 <<<<<<< HEAD
-=======
 
 (defn my-reduce [func init lst]
   (loop [coll lst
@@ -37,4 +36,7 @@
       (if (= piece (first whole))
         true
         (recur piece (rest whole))))))
+<<<<<<< HEAD
 >>>>>>> 78360c1... Added elem function to check if element is part of a list.
+=======
+>>>>>>> shakespearefan1
